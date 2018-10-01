@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="5dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/stock_symbol"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="APPL"/>
+        <TextView
+            android:id="@+id/latest_price"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@+id/stock_symbol"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="120"/>
+
+        <TextView
+            android:id="@+id/market_open"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@+id/latest_price"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="119"/>
+
+        <TextView
+            android:id="@+id/market_cap"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/market_open"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="100t"/>
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>
