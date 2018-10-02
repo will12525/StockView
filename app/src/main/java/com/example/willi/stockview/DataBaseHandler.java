@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
@@ -74,11 +75,15 @@ public class DataBaseHandler extends SQLiteOpenHelper {
 
     public StockData getStock(String symbol){
         SQLiteDatabase db = getReadableDatabase();
-        Cursor data = db.rawQuery("select * from "+STOCK_TABLE_NAME+" where stockSymbol="+symbol, null);
-        StockData stockData = dataToStockObject(data);
-        data.close();
+        try {
+            Cursor data = db.rawQuery("select * from " + STOCK_TABLE_NAME + " where stockSymbol=" + symbol, null);
+            StockData stockData = dataToStockObject(data);
+            data.close();
 
-        return stockData;
+            return stockData;
+        } catch (SQLiteException e){
+            return null;
+        }
     }
 
     public List<StockData> getAllStocks(){

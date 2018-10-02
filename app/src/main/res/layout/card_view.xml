@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_layout"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    app:cardCornerRadius="4dp"
+    android:layout_height="120dp"
+    app:cardCornerRadius="6dp"
     android:layout_margin="5dp"
     >
     <RelativeLayout
@@ -15,36 +15,65 @@
         <TextView
             android:id="@+id/stock_symbol"
             android:textColor="@color/black"
-            android:layout_margin="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="APPL"/>
+            android:layout_height="20dp"
+            android:text="@string/temp"/>
         <TextView
             android:id="@+id/latest_price"
             android:textColor="@color/black"
             android:layout_toEndOf="@+id/stock_symbol"
-            android:layout_margin="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="120"/>
+            android:layout_height="20dp"
+            android:text="@string/temp"/>
 
         <TextView
             android:id="@+id/market_open"
             android:textColor="@color/black"
             android:layout_toEndOf="@+id/latest_price"
-            android:layout_margin="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="119"/>
+            android:layout_height="20dp"
+            android:text="@string/temp"/>
 
         <TextView
             android:id="@+id/market_cap"
             android:textColor="@color/black"
             android:layout_toEndOf="@id/market_open"
-            android:layout_margin="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="100t"/>
+            android:layout_height="20dp"
+            android:text="@string/temp"/>
+
+        <ImageView
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/ic_delete_black_24dp"
+            android:clickable="true"
+            android:contentDescription="@string/trash_can_to_delete_tracked_stock" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph_view"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_toStartOf="@id/delete_button"
+            android:layout_below="@id/stock_symbol"
+            />
 
     </RelativeLayout>
 

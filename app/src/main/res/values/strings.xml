@@ -6,4 +6,6 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="trash_can_to_delete_tracked_stock">Trash can to delete tracked stock</string>
+    <string name="temp">temp</string>
 </resources>
